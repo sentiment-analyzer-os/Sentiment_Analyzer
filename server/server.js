@@ -5,7 +5,7 @@ require('dotenv').config();
 const db = require('./pg');
 const bodyParser = require('body-parser')
 
-const dataController = require('./controllers/data-controller');
+const dataController = require('./data-controller');
 
 // Parse application/json
 app.use(bodyParser.json())
