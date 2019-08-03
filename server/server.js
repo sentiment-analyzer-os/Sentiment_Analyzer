@@ -20,8 +20,8 @@ app.post('/', /*dataController.query,*/ (request, response) => {
 
   // MOCK DATA.  FOR TESTING PURPOSES ONLY.
   const mockData = {
-    'labels': [],
-    'values': []
+    'labels': Array(120).forEach(val => "{Month} {Year}"),
+    'values': Array(120).forEach(val => -10 + Math.random() * 20 )
   }
   response.locals.result = mockData;
 
@@ -30,7 +30,7 @@ app.post('/', /*dataController.query,*/ (request, response) => {
 });
 
 // Global error handler.
-app.use((request, response, error, next) => response.send(error) );
+app.use((error, request, response, next) => response.status(500).send(error));
 
 // Listen on...
 app.listen(3000);

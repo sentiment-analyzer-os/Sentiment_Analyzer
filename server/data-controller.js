@@ -59,12 +59,12 @@ const processSentiment = (string) => {
   // Build query.
   const procesSentimentQuery = {
     name: 'processsentiment-query',
-    text: 'SELECT $1 FROM $2 WHERE $3 LIKE $4;',
+    text: 'SELECT $1 FROM $2 WHERE $3 ILIKE $4;',
     values: ['*', 'items', 'text', `%${string}%`],
   }
 
   // Execute query.
-  db.query(cacheQuery, (err, result) => {
+  db.query(procesSentimentQuery, (err, result) => {
     // Handle error.
     if (err) next(err);
     
