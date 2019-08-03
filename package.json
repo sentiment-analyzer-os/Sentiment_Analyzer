@@ -1,0 +1,44 @@
+{
+  "name": "scratch-project-data-visualization",
+  "version": "1.0.0",
+  "description": "keyword sentiment analysis of hacker news",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon ./server/server.js",
+    "build": "NODE_ENV=production webpack",
+    "dev":"NODE_ENV=development webpack-dev-server --open & npm run start",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/atreeleaf/scratch-project_data-visualization.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/atreeleaf/scratch-project_data-visualization/issues"
+  },
+  "homepage": "https://github.com/atreeleaf/scratch-project_data-visualization#readme",
+  "dependencies": {
+    "@material-ui/core": "^4.3.0",
+    "chart.js": "^2.8.0",
+    "express": "^4.17.1",
+    "pg": "^7.12.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "sentiment": "^5.0.1"
+  },
+  "devDependencies": {
+    "babel-loader": "^8.0.6",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.39.1",
+    "webpack-cli": "^3.3.6",
+    "webpack-dev-server": "^3.7.2",
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/preset-react": "^7.0.0",
+    "node-sass": "^4.12.0",
+    "nodemon": "^1.19.1"
+  }
+}
