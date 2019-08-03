@@ -20,10 +20,7 @@ router.get('/', (req, res) => {
     const newData = dataFilter.filter((data,index)=>{
       return dataFields[index]
     })  // filtering all undefined values
-
-
     // removing all nonalphanumeric characters from strings for SQL Insert Query
-
     const formattedData = newData.map((item)=>{
       let potentialString = Object.values(item)[0] // removing all nonalphanumeric characters from strings
       if (typeof potentialString === 'string'){
@@ -32,33 +29,27 @@ router.get('/', (req, res) => {
         return potentialString
       }
     })
-
     // columns of values specified in the get request
     const columns = newData.map((datafield)=>{
       return Object.keys(datafield)[0]
     }) // obtaining keys from all valid data in our objects
-  
     const params = columns.join(',')
     const vals = formattedData.join(',')
     console.log(newData)
     console.log(params)
     console.log(vals)
-
-    // const dynamicQuery = `INSERT INTO mastertable (${params}) VALUES (${vals})`
     const testQuery = `INSERT INTO mastertable (${params}) VALUES (${vals})`
-
       db.query(testQuery, (err,res)=>{
         if (err) {
           console.log(err)
           return err;
         } 
-        return res
+      res.status(200).send('success')
       })
-    // res.status(200).send('success')
   })
-  // .catch((err)=>{
-  //   console.log(err)
-  // })
+  .catch((err)=>{
+    console.log(err)
+  })
 })
 
 module.exports = router;
