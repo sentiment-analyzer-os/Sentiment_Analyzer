@@ -14,7 +14,7 @@ class SearchContainer extends React.Component {
     }
     render() {
         return (
-            <div id='SearchContainer' class='animated heartBeat'>
+            <div id='SearchContainer' className='animated heartBeat'>
                 <Search></Search>
             </div>
         )
