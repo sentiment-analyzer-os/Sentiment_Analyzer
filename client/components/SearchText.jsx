@@ -26,7 +26,7 @@ class SearchText extends React.Component {
     render() {
         return (
             <div id='SearchText'>
-                <input type='text' id='Input' onKeyUp={this.search}/>
+                <input type='text' placeholder='Enter a search item...' id='Input' onKeyUp={this.search}/>
             </div>
         )
     }

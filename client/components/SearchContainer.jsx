@@ -11,15 +11,11 @@ class SearchContainer extends React.Component {
     constructor() {
         super();
         this.state = {};
-        this.moveUp = this.moveUp.bind(this);
-    }
-    moveUp() {
-
     }
     render() {
         return (
             <div id='SearchContainer' class='animated heartBeat'>
-            <Search></Search>
+                <Search></Search>
             </div>
         )
     }
