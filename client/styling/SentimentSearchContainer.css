@@ -1,0 +1,11 @@
+#SentimentSearchContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: grey; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    margin-top: -20%;
+}

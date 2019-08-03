@@ -5,13 +5,13 @@ import './../styling/Sentiment.css';
 import 'animate.css';
 
 class Sentiment extends React.Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = {};
     }
     render() {
         return (
-            <div id='sentiment' class='animated fadeInDown'>
+            <div className={this.props.classes + ' ' + 'animated' + ' ' + 'fadeInDown'} onClick={this.props.clickMe}>
                 <p>Search for a technology and receive its developer sentiment</p>
             </div>
         )
