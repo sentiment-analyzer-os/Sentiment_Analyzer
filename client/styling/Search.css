@@ -1,0 +1,14 @@
+#Search {
+    position: absolute;
+    width: 50%;
+    height: 7.5vh;
+    /* background-color: lightblue; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-style: solid;
+    border-color: #EAC67A;
+    border-width: .075em;
+    border-radius: 15px;
+    caret-color: #EAC67A;
+}
