@@ -18,7 +18,7 @@ const createMasterTable =
 
 const createCacheTable = 
 `CREATE TABLE IF NOT EXISTS
- cached_results (id SERIAL PRIMARY KEY, query_string VARCHAR, labels VARCHAR, data VARCHAR)`
+ cached_results (id SERIAL PRIMARY KEY, query_string VARCHAR, labels VARCHAR, sentiment_data VARCHAR, frequency_data VARCHAR)`
 
 
 // const testQuery = 
