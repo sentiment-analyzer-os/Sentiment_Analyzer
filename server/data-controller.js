@@ -69,7 +69,7 @@ const processSentiment = (string) => {
     if (err) next(err);
     
     // Process sentiments.
-    const sentimentArray = result.map(row => {
+    const sentimentArray = result.rows.map(row => {
       // Put the date and sentiment score into a new array.
       return [row.time, sentiment.analyze(row.text)];
     });
