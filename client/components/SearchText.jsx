@@ -13,20 +13,37 @@ class SearchText extends React.Component {
         this.search = this.search.bind(this);
     }
     search(event) {
-        document.addEventListener('keyup', function (event) {
+        console.log('keyed up');
             if (event.defaultPrevented) {
                 return;
             }
             var key = event.key || event.keyCode;
             if (key === 'Enter') {
-                // make fetch request
-            }
-        });
+                console.log(event.target.value);
+                console.log('fetch sending...');
+                fetch('/', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        queryString: 'message from haris'
+                    })
+                })
+                .then(function(response) {
+                    return console.log(response.json());
+                })
+                // .then(function(response) {
+
+                // })
+                console.log('fetch sent...');
+        }
+
     }
     render() {
         return (
             <div id='SearchText'>
-                <input type='text' id='Input' onKeyUp={this.search}/>
+                <input type='text' placeholder='Enter a search item...' id='Input' onKeyUp={this.search}/>
             </div>
         )
     }
