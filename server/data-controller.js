@@ -12,7 +12,7 @@ const dataController = {};
  */
 dataController.searchCache = (request, response, next) => {
   // Extract the query string from the request object.
-  let queryString = request.body.queryString;
+  let queryString = request.body.queryString.toLowerCase();
 
   // Clean the query string.
   queryString = queryString.trim();

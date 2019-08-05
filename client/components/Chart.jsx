@@ -11,6 +11,7 @@ import { Line } from 'react-chartjs-2';
 
 // import css
 import './../styling/Chart.css';
+import 'animate.css';
 
 // const data = {
     // labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
@@ -51,7 +52,7 @@ class Chart extends React.Component {
 
         return (
             <div id='haris' class='animated fadeInUp'>
-                <Line data = {this.props.data} options={this.props.options} width={800} height={400}></Line>
+                <Line data = {this.props.data} options={this.props.options} width={1000} height={400} className='animate fadeIn'></Line>
                 {/* {console.log('das data => ', this.props.data)} */}
             </div>
         )

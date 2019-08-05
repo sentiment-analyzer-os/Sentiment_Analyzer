@@ -2,7 +2,7 @@
     position: absolute;
     width: 50%;
     height: 7.5vh;
-    /* background-color: lightblue; */
+    background-color: #162327;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -11,4 +11,5 @@
     border-width: .075em;
     border-radius: 15px;
     caret-color: #EAC67A;
+    box-shadow: #171b1d 0px 15px 8px;
 }

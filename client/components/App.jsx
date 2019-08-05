@@ -17,28 +17,29 @@ class App extends React.Component {
         this.state = {
             move_SentimentSearchContainer: false,
             data: {
+                name: 'Sentiment Over Time',
                 labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
                 datasets: [
                     {
-                        label: 'Query Results',
+                        label: 'Sentiment Over Time',
                         fill: false,
                         lineTension: 0.25,
-                        backgroundColor: '#EAC67A',
-                        borderColor: '#EAC67A',
+                        backgroundColor: 'rgba(75,192,192,1)',
+                        borderColor: 'rgba(75,192,192,1)',
                         borderCapStyle: 'butt',
                         borderDash: [],
                         borderDashOffset: 0.0,
                         borderJoinStyle: 'miter',
-                        pointBorderColor: '#984B43',
-                        pointBackgroundColor: '#984B43',
+                        pointBorderColor: 'rgba(75,192,192,1)',
+                        // pointBackgroundColor: '#984B43',
                         pointBorderWidth: 1,
                         pointHoverRadius: 5,
-                        pointHoverBackgroundColor: '#984B43',
-                        pointHoverBorderColor: '#984B43',
+                        pointHoverBackgroundColor: 'rgba(75,192,192,0.4)',
+                        pointHoverBorderColor: 'rgba(75,192,192,0.4)',
                         pointHoverBorderWidth: 2,
                         pointRadius: 1,
                         pointHitRadius: 10,
-                        data: [-7, 3, 59, 80, 81, 56, 55, 40, -4]
+                        data: []
                     }
                 ]
             },
@@ -46,11 +47,27 @@ class App extends React.Component {
                 scales: {
                     yAxes: [{
                         ticks: {
+                            fontColor:'white',
                             beginAtZero: false,
                             min: -10,
-                            max: 10
+                            max: 20
+                        },
+                        gridLines: {
+                            color: '#334449'
                         }
-                    }]
+                    }],
+                    xAxes:[
+                        {
+                            ticks:{
+                                maxTicksLimit: 10,
+                                autoSkip: true,
+                                fontColor:'white'
+                            },
+                            gridLines: {
+                                color: '#233237'
+                            }
+                        }
+                    ]
                 }
             }
         };
