@@ -20,8 +20,8 @@ app.post('/', /*dataController.query,*/ (request, response) => {
 
   // MOCK DATA.  FOR TESTING PURPOSES ONLY.
   const mockData = {
-    'labels': Array(120).forEach(val => "{Month} {Year}"),
-    'values': Array(120).forEach(val => -10 + Math.random() * 20 )
+    'labels': Array.apply(null, Array(120)).map(val => "{Month} {Year}"),
+    'values': Array.apply(null, Array(120)).map(val => -10 + Math.random() * 20 )
   }
   response.locals.result = mockData;
 
