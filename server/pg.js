@@ -1,6 +1,5 @@
 const { Pool } = require('pg');
 
-console.log(process.env.CONNECTIONSTRING)
 // const connectionString = process.env.CONNECTIONSTRING;
 // storing this on my local computer due to size limitations. 
 const connectionString = 'postgres://andrewtang@localhost/snape'

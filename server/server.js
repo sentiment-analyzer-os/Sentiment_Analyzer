@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const path = require('path');
-require('dotenv').config();
+// require('dotenv').config(); // included for future deployment -- not used in the current version
 const db = require('./pg');
 const bodyParser = require('body-parser')
 
