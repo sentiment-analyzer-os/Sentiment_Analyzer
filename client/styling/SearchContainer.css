@@ -1,0 +1,9 @@
+#SearchContainer {
+    position: absolute;
+    width: 100%;
+    height: 7.5vh;
+    /* background-color: blueviolet; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
