@@ -51,7 +51,7 @@ class Chart extends React.Component {
 
         return (
             <div id='haris' class='animated fadeInUp'>
-                <Line data = {this.props.data}width={150} height={75}></Line>
+                <Line data = {this.props.data} options={this.props.options} width={800} height={400}></Line>
                 {/* {console.log('das data => ', this.props.data)} */}
             </div>
         )

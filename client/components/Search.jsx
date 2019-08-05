@@ -8,7 +8,6 @@ import './../styling/Search.css';
 import 'animate.css';
 
 class Search extends React.Component {
-
     render() {
         return (
             <div id='Search'>

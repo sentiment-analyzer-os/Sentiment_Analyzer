@@ -20,27 +20,38 @@ class App extends React.Component {
                 labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
                 datasets: [
                     {
-                        label: 'My First dataset',
+                        label: 'Query Results',
                         fill: false,
-                        lineTension: 0.1,
-                        backgroundColor: 'rgba(75,192,192,0.4)',
-                        borderColor: 'rgba(75,192,192,1)',
+                        lineTension: 0.25,
+                        backgroundColor: '#EAC67A',
+                        borderColor: '#EAC67A',
                         borderCapStyle: 'butt',
                         borderDash: [],
                         borderDashOffset: 0.0,
                         borderJoinStyle: 'miter',
-                        pointBorderColor: 'rgba(75,192,192,1)',
-                        pointBackgroundColor: '#fff',
+                        pointBorderColor: '#984B43',
+                        pointBackgroundColor: '#984B43',
                         pointBorderWidth: 1,
                         pointHoverRadius: 5,
-                        pointHoverBackgroundColor: 'rgba(75,192,192,1)',
-                        pointHoverBorderColor: 'rgba(220,220,220,1)',
+                        pointHoverBackgroundColor: '#984B43',
+                        pointHoverBorderColor: '#984B43',
                         pointHoverBorderWidth: 2,
                         pointRadius: 1,
                         pointHitRadius: 10,
-                        data: [3, 59, 80, 81, 56, 55, 40]
+                        data: [-7, 3, 59, 80, 81, 56, 55, 40, -4]
                     }
                 ]
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: false,
+                            min: -10,
+                            max: 10
+                        }
+                    }]
+                }
             }
         };
         this.move = this.move.bind(this);
@@ -50,8 +61,8 @@ class App extends React.Component {
         console.log('works1');
         this.setState((state)=>{
             let newState = {...state};
-            newState.labels = newData.labels;
-            newState.data.datasets[0].data = newData.values;
+            newState.data.labels = newData.labels;
+            newState.data.datasets[0].data = newData.sentimentData;
             console.log('UPDATED STATE ' + newState.data)
             return newState;
         })
@@ -71,7 +82,7 @@ class App extends React.Component {
         return (
             <div id='App'>
                 <SentimentSearchContainer updateState={this.update} className={classes.join(' ')} onClick={this.move} data={this.state.data}></SentimentSearchContainer>
-                <Chart data={this.state.data}></Chart>
+                <Chart data={this.state.data} options={this.state.options}></Chart>
                 {/* grab values associated with data */}
                 {/* {console.log(this.state.data.datasets[0]['data'])} */}
                 {/* grab values associated with labels */}
