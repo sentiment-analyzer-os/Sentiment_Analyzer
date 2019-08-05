@@ -29,8 +29,6 @@ describe('database unit tests', () => {
     it('writes a valid entry to the JSON file', () => {
       //create test entry
       // const entry = ..a valid object to test with database goes here;
-
-
       //db.sync sends the marketList where it is passed into db.write, which 
       const result = db.sync(entry);
       // market either returns an error or nothing else?
@@ -55,7 +53,7 @@ describe('database unit tests', () => {
     it('does not returns an error when something is wrong with the database input', () => {
       const testCases = [{cards: 1}, {location: 'here'}];
 
-      //f
+
       
     });
 

@@ -17,18 +17,28 @@ app.get('/', (request, response) => {
 
 // Default endpoint POST request.  Performs search and returns result.
 app.post('/', dataController.searchCache, dataController.processSentiment, dataController.updateCache, (request, response) => {
-
-  // MOCK DATA.  FOR TESTING PURPOSES ONLY.
-
-  // const mockData = {
-  //   'labels': Array.apply(null, Array(120)).map(() => "{Month} {Year}"),
-  //   'values': Array.apply(null, Array(120)).map(() => -10 + Math.random()*20),
-  // }
-  // response.locals.result = mockData;
-
   // Send success status code and JSON'd data stored in res.locals.result.
   response.status(200).json(response.locals.result);
 });
+
+
+
+
+// app.post('/', (request, response) => {
+
+//   // MOCK DATA.  FOR TESTING PURPOSES ONLY.
+
+//   const mockData = {
+//     'labels': Array.apply(null, Array(120)).map(() => "{Month} {Year}"),
+//     'values': Array.apply(null, Array(120)).map(() => -10 + Math.random()*20),
+//   }
+//   response.locals.result = mockData;
+
+
+//   // Send success status code and JSON'd data stored in res.locals.result.
+//   response.status(200).json(response.locals.result);
+// });
+
 
 // Global error handler.
 app.use((error, request, response, next) => response.status(500).send(error));

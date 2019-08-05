@@ -12,7 +12,7 @@ class Sentiment extends React.Component {
     render() {
         return (
             <div className={this.props.classes + ' ' + 'animated' + ' ' + 'fadeInDown'} onClick={this.props.clickMe}>
-                <p>Search for a technology and receive its developer sentiment</p>
+                <p id = 'title'>Explore the sentiments of developers across the globe.</p>
             </div>
         )
     }
