@@ -20,8 +20,8 @@ app.post('/', /*dataController.query,*/ (request, response) => {
 
   // MOCK DATA.  FOR TESTING PURPOSES ONLY.
   const mockData = {
-    'labels': Array(120).forEach(val => "{Month} {Year}"),
-    'values': Array(120).forEach(val => -10 + Math.random() * 20 )
+    'labels': Array.apply(null, Array(120)).map(() => "{Month} {Year}"),
+    'values': Array.apply(null, Array(120)).map(() => -10 + Math.random()*20),
   }
   response.locals.result = mockData;
 
@@ -34,4 +34,3 @@ app.use((error, request, response, next) => response.status(500).send(error));
 
 // Listen on...
 app.listen(3000);
- 
