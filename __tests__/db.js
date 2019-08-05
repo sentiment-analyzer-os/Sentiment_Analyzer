@@ -5,7 +5,7 @@ const db = require('../server/pg.js');
 // const testJsonFile = path to database
 const testJsonFile = path.resolve(__dirname, '../server/db/database.test.json');
 
-describe('database unit tests', () =>{
+describe('database unit tests', () => {
 /**
    * Jest runs the "beforeAll" function once, before any tests are executed.
    * Here, we write to the file and then reset our database model. Then, we
@@ -38,7 +38,7 @@ describe('database unit tests', () =>{
       // pulls table from reading the contents and parsing the variable, defined above with a absolute path
       const table = JSON.parse(fs.readFileSync(testJsonFile));
       //compare the post and pre, expect them to be equal
-      expect(table).toEqual(entry;
+      expect(table).toEqual(entry);
     });
 
     it('ignores already entered id fields on refresh of db', () => {
@@ -67,5 +67,7 @@ describe('database unit tests', () =>{
       const result = db.sync(testCase);
       expect(result).toBeInstanceOf(Error);
     });
-}
+  });
+});
+
 

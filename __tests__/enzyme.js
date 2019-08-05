@@ -1,6 +1,6 @@
 import React from "react";
-import { configure, shallow } from enzyme;
-import adapter from "enzyme-adapter-react-16";
+import { configure, shallow } from "enzyme";
+import Adapter from "enzyme-adapter-react-16";
 import toJson from "enzyme-to-json";
 import sinon from 'sinon';
 
@@ -13,7 +13,7 @@ import Sentiment from "../cient/components/Sentiment";
 import SentimentSearchContainer from "../client/components/SentimentSearchContainer";
 import { Line } from 'react-chartjs-2';
 
-configure ({ adapter = new Adapter() });
+configure({ adapter: new Adapter() });
 
 describe ("React Unit Test", () => {
   describe("App", () => {
@@ -63,7 +63,7 @@ describe ("React Unit Test", () => {
     it("expects the value passed down as props to be \'data\'", () => {
       //to be or toEqual here?
       let wrapper = wrapper.find("<div id=\'haris\' class=\'animated fadeInUp\'/> ");
-      wrapper.setProps({const data = {labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'], }});
+      wrapper.setProps({const data = {labels: ['Haris','Andrew','Justin','Danny'] }});
       expect(wrapper.find({data = {data}}).toBe(true));
       expect(wrapper.find(width={100} height={50}).toBe(true));
     });
