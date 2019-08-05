@@ -1,5 +1,5 @@
 const fs = require('fs');
-const path = requre("path");
+const path = require("path");
 const db = require('../server/pg.js');
 
 // const testJsonFile = path to database
