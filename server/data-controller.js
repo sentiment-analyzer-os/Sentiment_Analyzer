@@ -80,7 +80,7 @@ const processSentiment = (string) => {
     // Stick the results in the cache.
     const cacheSentimentQuery = {
       name: 'cachesentiment-query',
-      text: 'INSERT INTO $1 VALUES ($2, $3, , ...);',
+      text: 'INSERT INTO $1 VALUES ($2, $3, $4);',
       values: ['cached_results', string, JSON.stringify(labels), JSON.stringify(data)],
     }
 
