@@ -2,6 +2,7 @@ const { Pool } = require('pg');
 
 console.log(process.env.CONNECTIONSTRING)
 // const connectionString = process.env.CONNECTIONSTRING;
+// storing this on my local computer due to size limitations. 
 const connectionString = 'postgres://andrewtang@localhost/snape'
 
 const pool = new Pool({
@@ -17,7 +18,7 @@ const createMasterTable =
 
 const createCacheTable = 
 `CREATE TABLE IF NOT EXISTS
- cached_results (id SERIAL PRIMARY KEY, query_string VARCHAR, labels VARCHAR, data VARCHAR)    `
+ cached_results (id SERIAL PRIMARY KEY, query_string VARCHAR, labels VARCHAR, data VARCHAR)`
 
 
 // const testQuery = 
@@ -25,11 +26,17 @@ const createCacheTable =
 //  VALUES (1,'testuser', 'hello', 3,'story',23789, 'hello world','wwww.google.com', 23)`
 
 
-
 pool.query( createMasterTable, (err, res) => {
   if (err) return err;
   return res
 });
+
+pool.query( createCacheTable, (err, res) => {
+  if (err) return err;
+  return res
+});
+
+
 
 
 module.exports = pool

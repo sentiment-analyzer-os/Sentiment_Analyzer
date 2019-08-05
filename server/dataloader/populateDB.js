@@ -1,12 +1,11 @@
 const fetch = require('node-fetch');
 const db = require('../pg');
 
+// NOTE: the purpose of this file is to populate the database with the hackernews API.
 // declaring variables outside of function scope so they can be incremented at each recursive call
 var first = 2916618
 var second = first + 12000
-
-// 12k requests every 25 seconds to HN API  & writing to our database
-
+// 12k requests every 25 seconds hitting HN API & writing to our database
 function request() {
   console.log(first,second)
   for (let i = first;i<=second;i++){
