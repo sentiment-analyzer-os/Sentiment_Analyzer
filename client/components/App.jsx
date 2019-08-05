@@ -51,7 +51,8 @@ class App extends React.Component {
         this.setState((state)=>{
             let newState = {...state};
             newState.labels = newData.labels;
-            newState.datasets[0].data = newData.data;
+            newState.data.datasets[0].data = newData.values;
+            console.log('UPDATED STATE ' + newState.data)
             return newState;
         })
         console.log('works');
@@ -62,6 +63,7 @@ class App extends React.Component {
         });
     }
     render() {
+        console.log('APP.JSX DATA' + this.state.data)
         let classes = [''];
         if (this.state.move_SentimentSearchContainer) {
             classes.push('.move_up');
