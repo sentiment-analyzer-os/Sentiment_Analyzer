@@ -10,8 +10,8 @@ import './../styling/SentimentSearchContainer.css';
 import 'animate.css';
 
 class SentimentSearchContainer extends React.Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = {
             addClass: false
         };
@@ -35,7 +35,7 @@ class SentimentSearchContainer extends React.Component {
         return (
             <div id='SentimentSearchContainer'>
                 <Sentiment classes={classes.join(' ')} clickMe={this.toggle}></Sentiment>
-                <SearchContainer></SearchContainer>
+                <SearchContainer updateState={this.props.updateState} data={this.props.data}></SearchContainer>
             </div>
         )
     }

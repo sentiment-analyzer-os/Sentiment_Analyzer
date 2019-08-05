@@ -12,3 +12,7 @@ body {
     justify-content: center;
     align-items: center;
 }
+
+.move_up {
+    background-color: red;
+}

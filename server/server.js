@@ -19,11 +19,13 @@ app.get('/', (request, response) => {
 app.post('/', dataController.searchCache, dataController.processSentiment, dataController.updateCache, (request, response) => {
 
   // MOCK DATA.  FOR TESTING PURPOSES ONLY.
+
   // const mockData = {
   //   'labels': Array.apply(null, Array(120)).map(() => "{Month} {Year}"),
   //   'values': Array.apply(null, Array(120)).map(() => -10 + Math.random()*20),
   // }
   // response.locals.result = mockData;
+
 
   // Send success status code and JSON'd data stored in res.locals.result.
   response.status(200).json(response.locals.result);
