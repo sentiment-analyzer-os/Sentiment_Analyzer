@@ -1,4 +1,4 @@
-const fetch = require('node-fetch');
+// const fetch = require('node-fetch');
 const db = require('../pg');
 
 // NOTE: the purpose of this file is to populate the database with the hackernews API.
