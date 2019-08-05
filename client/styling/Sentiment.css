@@ -1,9 +1,15 @@
-#sentiment {
+.main {
+    position: relative;
     width: 100%;
     height: 12.5vh;
+    /* background-color: orange; */
     /* background-color: azure; */
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 1.5em;
+}
+
+.move {
+    color: aquamarine;
 }

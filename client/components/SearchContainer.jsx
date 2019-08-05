@@ -8,18 +8,14 @@ import 'animate.css';
 import Search from './Search.jsx';
 
 class SearchContainer extends React.Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = {};
-        this.moveUp = this.moveUp.bind(this);
-    }
-    moveUp() {
-
     }
     render() {
         return (
-            <div id='SearchContainer' class='animated heartBeat'>
-            <Search></Search>
+            <div id='SearchContainer' className='animated heartBeat'>
+                <Search updateState={this.updateState} data={this.props.data}></Search>
             </div>
         )
     }

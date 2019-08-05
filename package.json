@@ -23,13 +23,23 @@
     "@material-ui/core": "^4.3.0",
     "animate.css": "^3.7.2",
     "chart.js": "^2.8.0",
+<<<<<<< HEAD
     "dotenv": "^8.0.0",
     "enzyme-adapter-react-16": "^1.14.0",
+||||||| merged common ancestors
+=======
+    "dotenv": "^8.0.0",
+>>>>>>> ef268981a72cb5a9fe4f0e81a280f8cf57f1017d
     "express": "^4.17.1",
     "pg": "^7.12.0",
     "react": "^16.8.6",
+<<<<<<< HEAD
     "react-chartjs": "^1.2.0",
     "react-chartjs-2": "^2.7.6",
+||||||| merged common ancestors
+=======
+    "react-chartjs-2": "^2.7.6",
+>>>>>>> ef268981a72cb5a9fe4f0e81a280f8cf57f1017d
     "react-dom": "^16.8.6",
     "sentiment": "^5.0.1"
   },

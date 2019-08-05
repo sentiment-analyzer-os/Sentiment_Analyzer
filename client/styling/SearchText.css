@@ -18,3 +18,7 @@
 #Input:focus {
     outline: none;
 }
+
+::placeholder {
+    color: #EAC67A;
+}

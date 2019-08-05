@@ -1,6 +1,6 @@
 #SearchContainer {
-    position: absolute;
-    width: 100%;
+    position: relative;
+    width: 175%;
     height: 7.5vh;
     /* background-color: blueviolet; */
     display: flex;
