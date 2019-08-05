@@ -26,7 +26,6 @@ app.post('/', dataController.searchCache, dataController.processSentiment, dataC
   // }
   // response.locals.result = mockData;
 
-
   // Send success status code and JSON'd data stored in res.locals.result.
   response.status(200).json(response.locals.result);
 });
