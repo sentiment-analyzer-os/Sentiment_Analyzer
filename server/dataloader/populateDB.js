@@ -1,9 +1,11 @@
 const fetch = require('node-fetch');
-const db = require('./pg');
+const db = require('../pg');
 
+// declaring variables outside of function scope so they can be incremented at each recursive call
+var first = 2916618
+var second = first + 12000
 
-var first = 563141
-var second = first + 10000
+// 12k requests every 25 seconds to HN API  & writing to our database
 
 function request() {
   console.log(first,second)
@@ -14,7 +16,7 @@ function request() {
     .then((data)=>{
       let {id, by, text, descendants, kids, score, time, title, type } = data; // destructuring the incoming response
       const dataFields = [id, by, text, descendants, kids, score, time, title, type]; 
-      if (!kids){ // if kids is undefined
+      if (!kids){ // if kids is undefined -- usually an array
         kids = []
       }
       // structure to obtain keys and values of valid data
@@ -39,7 +41,6 @@ function request() {
       const testQuery = `INSERT INTO mastertable (${columnString}) VALUES (${valueString})`
         db.query(testQuery, (err,res)=>{
           if (err) {
-            console.log(err)
             return err;
           } 
         })
@@ -49,8 +50,8 @@ function request() {
     }
     
     setTimeout(()=>{
-      first = first + 10001
-      second = second + 10000
+      first = first + 12001
+      second = second + 12000
       request()
     },25000)
 }
