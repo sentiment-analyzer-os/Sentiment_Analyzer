@@ -5,6 +5,7 @@ import React from 'react';
 // import Sentiment from './Sentiment.jsx';
 import SentimentSearchContainer from './SentimentSearchContainer.jsx';
 import Chart from './Chart.jsx';
+import Footer from './Footer.jsx'
 // import SearchContainer from './SearchContainer.jsx';
 
 // import styling
@@ -21,7 +22,7 @@ class App extends React.Component {
                 labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
                 datasets: [
                     {
-                        label: 'Sentiment Over Time',
+                        label: 'Sentiment',
                         fill: false,
                         lineTension: 0.25,
                         backgroundColor: 'rgba(75,192,192,1)',
@@ -104,6 +105,7 @@ class App extends React.Component {
                 {/* {console.log(this.state.data.datasets[0]['data'])} */}
                 {/* grab values associated with labels */}
                 {/* {console.log(this.state.data.labels)} */}
+                <Footer/>
             </div>
         )
     }

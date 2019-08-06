@@ -19,3 +19,23 @@ body {
     background-color: red;
 }
 
+
+
+#footer{
+    margin-top:80px;
+}
+
+#creators{
+    color: rgb(152, 160, 206);
+    font-size: 14px;
+}
+
+
+#github-handles{
+    color:white;
+    font-size:14px;
+}
+
+#links{
+    color:darkcyan;
+}

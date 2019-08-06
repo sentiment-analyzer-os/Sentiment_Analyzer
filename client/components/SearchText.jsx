@@ -45,9 +45,9 @@ class SearchText extends React.Component {
     }
     render() {
         return (
-            <div id='SearchText'>
-                <input type='text' placeholder='Enter a search item...' id='Input' onKeyUp={this.search}/>
-            </div>
+                <div id='SearchText'>
+                    <input type='text' autocomplete = 'off'placeholder='Enter a search item...' id='Input' onKeyUp={this.search}/>
+                </div>
         )
     }
 }
