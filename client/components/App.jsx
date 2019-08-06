@@ -39,7 +39,7 @@ class App extends React.Component {
                         pointHoverBorderWidth: 2,
                         pointRadius: 1,
                         pointHitRadius: 10,
-                        data: []
+                        data: new Array(139).fill(0),
                     }
                 ]
             },
